@@ -12,7 +12,7 @@ namespace WebShop.Data_Access_Layer
         public WebShopDBContext()
         {
             /*initializíng the generated database with some default (test)data*/
-            Database.SetInitializer<WebShopDBContext>(new WebShopDBInitializer());
+            //Database.SetInitializer<WebShopDBContext>(new WebShopDBInitializer());//not neccessary with migrations
         }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<CorporateCustomer> CorporateCustomers { get; set; }
