@@ -12,9 +12,10 @@ namespace WebShop.Models
     {
         public int OrderID { get; set; }
         public string OrderStatus { get; set; }
+        public long TotalPrice { get; set; }
         [Required]
         public DateTime ShippingDate { get; set; }
-        public long TotalPrice { get; set; }
+
 
         public int CustomerID { get; set; }
         [ForeignKey("CustomerID")]
