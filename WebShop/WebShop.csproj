@@ -199,6 +199,10 @@
     <Compile Include="Migrations\201604282004491_AddedSomeData.Designer.cs">
       <DependentUpon>201604282004491_AddedSomeData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604291128486_ChangesInOrderViews.cs" />
+    <Compile Include="Migrations\201604291128486_ChangesInOrderViews.Designer.cs">
+      <DependentUpon>201604291128486_ChangesInOrderViews.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CorporateCustomer.cs" />
@@ -320,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604282004491_AddedSomeData.resx">
       <DependentUpon>201604282004491_AddedSomeData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604291128486_ChangesInOrderViews.resx">
+      <DependentUpon>201604291128486_ChangesInOrderViews.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

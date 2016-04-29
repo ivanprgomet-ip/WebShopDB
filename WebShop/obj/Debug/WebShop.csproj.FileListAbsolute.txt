@@ -64,3 +64,4 @@ C:\Users\Ivan\Documents\Visual Studio 2015\Projects\_local\WebShopSolution\WebSh
 C:\Users\Ivan\Documents\Visual Studio 2015\Projects\_local\WebShopSolution\WebShop\obj\Debug\WebShop.Migrations.ManufacturerNameMaxLength.resources
 C:\Users\Ivan\Documents\Visual Studio 2015\Projects\_local\WebShopSolution\WebShop\obj\Debug\WebShop.Migrations.AddedStoredProcedure.resources
 C:\Users\Ivan\Documents\Visual Studio 2015\Projects\_local\WebShopSolution\WebShop\obj\Debug\WebShop.Migrations.AddedSomeData.resources
+C:\Users\Ivan\Documents\Visual Studio 2015\Projects\_local\WebShopSolution\WebShop\obj\Debug\WebShop.Migrations.ChangesInOrderViews.resources
