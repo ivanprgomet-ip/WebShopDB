@@ -36,5 +36,45 @@
         isLeaf="false"
         isActiveClass="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2b26a479-aee9-4409-9b9e-fe5d08e270cd"
+        name="ProductController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f36fad08-0c72-4b77-a493-eeba75002719"
+        name="OrderController1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a4ba01ed-7718-4af7-8ae2-491cd313710c"
+        name="ManufacturerController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="310f9b6b-d4a4-4509-8bfe-a246873f7a95"
+        name="CategoryController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="697ccf6a-ec44-4c96-91e5-2a0bf7c47164"
+        name="ShippingCompanyController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>

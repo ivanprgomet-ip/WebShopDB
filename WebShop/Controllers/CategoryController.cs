@@ -11,116 +11,107 @@ using WebShop.Models;
 
 namespace WebShop.Controllers
 {
-    public class OrderController : Controller
+    public class CategoryController : Controller
     {
         private WebShopDBContext db = new WebShopDBContext();
 
-        // GET: Order
+        // GET: Category
         public ActionResult Index()
         {
-            var orders = db.Orders.Include(o => o.Customer).Include(o => o.ShippingCompany);
-            return View(orders.ToList());
+            return View(db.Categories.ToList());
         }
 
-        // GET: Order/Details/5
+        // GET: Category/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = db.Orders.Find(id);
-            if (order == null)
+            Category category = db.Categories.Find(id);
+            if (category == null)
             {
                 return HttpNotFound();
             }
-            return View(order);
+            return View(category);
         }
 
-        // GET: Order/Create
+        // GET: Category/Create
         public ActionResult Create()
         {
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "Firstname");
-            ViewBag.ShippingCompanyID = new SelectList(db.ShippingCompanies, "ShippingCompanyID", "ShippingCompanyName");
             return View();
         }
 
-        // POST: Order/Create
+        // POST: Category/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OrderID,ShippingDate,CustomerID,ShippingCompanyID")] Order order)   //removed orderstatus and totalprice from the bind include
+        public ActionResult Create([Bind(Include = "CategoryID,CategoryName,Description")] Category category)
         {
             if (ModelState.IsValid)
             {
-                db.Orders.Add(order);
+                db.Categories.Add(category);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "Firstname", order.CustomerID);
-            ViewBag.ShippingCompanyID = new SelectList(db.ShippingCompanies, "ShippingCompanyID", "ShippingCompanyName", order.ShippingCompanyID);
-            return View(order);
+            return View(category);
         }
 
-        // GET: Order/Edit/5
+        // GET: Category/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = db.Orders.Find(id);
-            if (order == null)
+            Category category = db.Categories.Find(id);
+            if (category == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "Firstname", order.CustomerID);
-            ViewBag.ShippingCompanyID = new SelectList(db.ShippingCompanies, "ShippingCompanyID", "ShippingCompanyName", order.ShippingCompanyID);
-            return View(order);
+            return View(category);
         }
 
-        // POST: Order/Edit/5
+        // POST: Category/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OrderID,OrderStatus,ShippingDate,TotalPrice,CustomerID,ShippingCompanyID")] Order order)
+        public ActionResult Edit([Bind(Include = "CategoryID,CategoryName,Description")] Category category)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(order).State = EntityState.Modified;
+                db.Entry(category).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "Firstname", order.CustomerID);
-            ViewBag.ShippingCompanyID = new SelectList(db.ShippingCompanies, "ShippingCompanyID", "ShippingCompanyName", order.ShippingCompanyID);
-            return View(order);
+            return View(category);
         }
 
-        // GET: Order/Delete/5
+        // GET: Category/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = db.Orders.Find(id);
-            if (order == null)
+            Category category = db.Categories.Find(id);
+            if (category == null)
             {
                 return HttpNotFound();
             }
-            return View(order);
+            return View(category);
         }
 
-        // POST: Order/Delete/5
+        // POST: Category/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Order order = db.Orders.Find(id);
-            db.Orders.Remove(order);
+            Category category = db.Categories.Find(id);
+            db.Categories.Remove(category);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

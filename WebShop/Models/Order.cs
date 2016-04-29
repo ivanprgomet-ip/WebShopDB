@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
@@ -11,8 +12,10 @@ namespace WebShop.Models
     {
         public int OrderID { get; set; }
         public string OrderStatus { get; set; }
-        public DateTime ShippingDate { get; set; }
         public long TotalPrice { get; set; }
+        [Required]
+        public DateTime ShippingDate { get; set; }
+
 
         public int CustomerID { get; set; }
         [ForeignKey("CustomerID")]

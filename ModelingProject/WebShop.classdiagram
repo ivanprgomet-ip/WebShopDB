@@ -627,6 +627,26 @@ Many products can be made by one Manufacturer.</description>
               <elementDefinition Id="93051a05-e417-4fe9-b0d0-d8228214e928" />
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="3ed37233-fd55-4a22-b1cc-0b04eeeb2031" name="ProductController" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="2b26a479-aee9-4409-9b9e-fe5d08e270cd" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="76d227eb-4f6c-4bea-adf4-c5c8cb93f737" name="ManufacturerController" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="a4ba01ed-7718-4af7-8ae2-491cd313710c" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="7363ec94-8771-43ae-8c18-fffb9256a561" name="CategoryController" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="310f9b6b-d4a4-4509-8bfe-a246873f7a95" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="06452a44-5e9d-40c4-bbd4-b9113e987156" name="ShippingCompanyController" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="697ccf6a-ec44-4c96-91e5-2a0bf7c47164" />
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>

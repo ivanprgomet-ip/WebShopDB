@@ -11,116 +11,107 @@ using WebShop.Models;
 
 namespace WebShop.Controllers
 {
-    public class OrderController : Controller
+    public class ShippingCompanyController : Controller
     {
         private WebShopDBContext db = new WebShopDBContext();
 
-        // GET: Order
+        // GET: ShippingCompany
         public ActionResult Index()
         {
-            var orders = db.Orders.Include(o => o.Customer).Include(o => o.ShippingCompany);
-            return View(orders.ToList());
+            return View(db.ShippingCompanies.ToList());
         }
 
-        // GET: Order/Details/5
+        // GET: ShippingCompany/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = db.Orders.Find(id);
-            if (order == null)
+            ShippingCompany shippingCompany = db.ShippingCompanies.Find(id);
+            if (shippingCompany == null)
             {
                 return HttpNotFound();
             }
-            return View(order);
+            return View(shippingCompany);
         }
 
-        // GET: Order/Create
+        // GET: ShippingCompany/Create
         public ActionResult Create()
         {
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "Firstname");
-            ViewBag.ShippingCompanyID = new SelectList(db.ShippingCompanies, "ShippingCompanyID", "ShippingCompanyName");
             return View();
         }
 
-        // POST: Order/Create
+        // POST: ShippingCompany/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OrderID,ShippingDate,CustomerID,ShippingCompanyID")] Order order)   //removed orderstatus and totalprice from the bind include
+        public ActionResult Create([Bind(Include = "ShippingCompanyID,ShippingCompanyName,ShippingCost")] ShippingCompany shippingCompany)
         {
             if (ModelState.IsValid)
             {
-                db.Orders.Add(order);
+                db.ShippingCompanies.Add(shippingCompany);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "Firstname", order.CustomerID);
-            ViewBag.ShippingCompanyID = new SelectList(db.ShippingCompanies, "ShippingCompanyID", "ShippingCompanyName", order.ShippingCompanyID);
-            return View(order);
+            return View(shippingCompany);
         }
 
-        // GET: Order/Edit/5
+        // GET: ShippingCompany/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = db.Orders.Find(id);
-            if (order == null)
+            ShippingCompany shippingCompany = db.ShippingCompanies.Find(id);
+            if (shippingCompany == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "Firstname", order.CustomerID);
-            ViewBag.ShippingCompanyID = new SelectList(db.ShippingCompanies, "ShippingCompanyID", "ShippingCompanyName", order.ShippingCompanyID);
-            return View(order);
+            return View(shippingCompany);
         }
 
-        // POST: Order/Edit/5
+        // POST: ShippingCompany/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OrderID,OrderStatus,ShippingDate,TotalPrice,CustomerID,ShippingCompanyID")] Order order)
+        public ActionResult Edit([Bind(Include = "ShippingCompanyID,ShippingCompanyName,ShippingCost")] ShippingCompany shippingCompany)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(order).State = EntityState.Modified;
+                db.Entry(shippingCompany).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "Firstname", order.CustomerID);
-            ViewBag.ShippingCompanyID = new SelectList(db.ShippingCompanies, "ShippingCompanyID", "ShippingCompanyName", order.ShippingCompanyID);
-            return View(order);
+            return View(shippingCompany);
         }
 
-        // GET: Order/Delete/5
+        // GET: ShippingCompany/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = db.Orders.Find(id);
-            if (order == null)
+            ShippingCompany shippingCompany = db.ShippingCompanies.Find(id);
+            if (shippingCompany == null)
             {
                 return HttpNotFound();
             }
-            return View(order);
+            return View(shippingCompany);
         }
 
-        // POST: Order/Delete/5
+        // POST: ShippingCompany/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Order order = db.Orders.Find(id);
-            db.Orders.Remove(order);
+            ShippingCompany shippingCompany = db.ShippingCompanies.Find(id);
+            db.ShippingCompanies.Remove(shippingCompany);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
