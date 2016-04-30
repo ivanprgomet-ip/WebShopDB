@@ -174,38 +174,6 @@
     <Compile Include="Migrations\201604281457290_InitialCreate.Designer.cs">
       <DependentUpon>201604281457290_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604281644269_addedlate.cs" />
-    <Compile Include="Migrations\201604281644269_addedlate.Designer.cs">
-      <DependentUpon>201604281644269_addedlate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604281713063_WhereAmI.cs" />
-    <Compile Include="Migrations\201604281713063_WhereAmI.Designer.cs">
-      <DependentUpon>201604281713063_WhereAmI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604281715173_ShippingDateRequired.cs" />
-    <Compile Include="Migrations\201604281715173_ShippingDateRequired.Designer.cs">
-      <DependentUpon>201604281715173_ShippingDateRequired.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604281717513_ManufacturerNameRequired.cs" />
-    <Compile Include="Migrations\201604281717513_ManufacturerNameRequired.Designer.cs">
-      <DependentUpon>201604281717513_ManufacturerNameRequired.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604281730480_ManufacturerNameMaxLength.cs" />
-    <Compile Include="Migrations\201604281730480_ManufacturerNameMaxLength.Designer.cs">
-      <DependentUpon>201604281730480_ManufacturerNameMaxLength.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604281739175_AddedStoredProcedure.cs" />
-    <Compile Include="Migrations\201604281739175_AddedStoredProcedure.Designer.cs">
-      <DependentUpon>201604281739175_AddedStoredProcedure.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604282004491_AddedSomeData.cs" />
-    <Compile Include="Migrations\201604282004491_AddedSomeData.Designer.cs">
-      <DependentUpon>201604282004491_AddedSomeData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604291128486_ChangesInOrderViews.cs" />
-    <Compile Include="Migrations\201604291128486_ChangesInOrderViews.Designer.cs">
-      <DependentUpon>201604291128486_ChangesInOrderViews.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CorporateCustomer.cs" />
@@ -321,30 +289,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201604281457290_InitialCreate.resx">
       <DependentUpon>201604281457290_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604281644269_addedlate.resx">
-      <DependentUpon>201604281644269_addedlate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604281713063_WhereAmI.resx">
-      <DependentUpon>201604281713063_WhereAmI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604281715173_ShippingDateRequired.resx">
-      <DependentUpon>201604281715173_ShippingDateRequired.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604281717513_ManufacturerNameRequired.resx">
-      <DependentUpon>201604281717513_ManufacturerNameRequired.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604281730480_ManufacturerNameMaxLength.resx">
-      <DependentUpon>201604281730480_ManufacturerNameMaxLength.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604281739175_AddedStoredProcedure.resx">
-      <DependentUpon>201604281739175_AddedStoredProcedure.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604282004491_AddedSomeData.resx">
-      <DependentUpon>201604282004491_AddedSomeData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604291128486_ChangesInOrderViews.resx">
-      <DependentUpon>201604291128486_ChangesInOrderViews.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

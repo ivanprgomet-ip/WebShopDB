@@ -14,6 +14,9 @@ namespace WebShop
     {
         protected void Application_Start()
         {
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<WebShop.Data_Access_Layer.WebShopDBContext, WebShop.Migrations.Configuration>());
+            //Database.SetInitializer<WebShopDBInitializer>(new WebShopDBInitializer());
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
