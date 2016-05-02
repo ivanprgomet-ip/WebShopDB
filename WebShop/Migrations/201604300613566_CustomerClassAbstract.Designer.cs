@@ -7,13 +7,13 @@ namespace WebShop.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ChangesInOrderViews : IMigrationMetadata
+    public sealed partial class CustomerClassAbstract : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ChangesInOrderViews));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CustomerClassAbstract));
         
         string IMigrationMetadata.Id
         {
-            get { return "201604291128486_ChangesInOrderViews"; }
+            get { return "201604300613566_CustomerClassAbstract"; }
         }
         
         string IMigrationMetadata.Source
