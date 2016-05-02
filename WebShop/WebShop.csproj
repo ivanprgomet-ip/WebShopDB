@@ -174,7 +174,12 @@
     <Compile Include="Migrations\201604281457290_InitialCreate.Designer.cs">
       <DependentUpon>201604281457290_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605021508122_AddedAudit.cs" />
+    <Compile Include="Migrations\201605021508122_AddedAudit.Designer.cs">
+      <DependentUpon>201605021508122_AddedAudit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Audit.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CorporateCustomer.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -281,6 +286,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201604281457290_InitialCreate.resx">
       <DependentUpon>201604281457290_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605021508122_AddedAudit.resx">
+      <DependentUpon>201605021508122_AddedAudit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

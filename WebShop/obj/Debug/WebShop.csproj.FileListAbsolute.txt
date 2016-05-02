@@ -57,3 +57,4 @@ C:\Users\Ivan\Documents\Visual Studio 2015\Projects\_local\WebShopSolution\WebSh
 C:\Users\Ivan\Documents\Visual Studio 2015\Projects\_local\WebShopSolution\WebShop\obj\Debug\WebShop.pdb
 C:\Users\Ivan\Documents\Visual Studio 2015\Projects\_local\WebShopSolution\WebShop\obj\Debug\WebShop.Migrations.InitialCreate.resources
 C:\Users\Ivan\Documents\Visual Studio 2015\Projects\_local\WebShopSolution\WebShop\obj\Debug\WebShop.csproj.GenerateResource.Cache
+C:\Users\Ivan\Documents\Visual Studio 2015\Projects\_local\WebShopSolution\WebShop\obj\Debug\WebShop.Migrations.AddedAudit.resources
