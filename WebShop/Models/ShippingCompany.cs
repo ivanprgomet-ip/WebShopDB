@@ -9,7 +9,7 @@ namespace WebShop.Models
     {
         public int ShippingCompanyID { get; set; }
         public string ShippingCompanyName { get; set; }
-        public long ShippingCost { get; set; }
+        public decimal ShippingCostPercentage { get; set; }
 
     }
 }

@@ -178,6 +178,10 @@
     <Compile Include="Migrations\201605021508122_AddedAudit.Designer.cs">
       <DependentUpon>201605021508122_AddedAudit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605030918279_ShippingCostAsPercentage.cs" />
+    <Compile Include="Migrations\201605030918279_ShippingCostAsPercentage.Designer.cs">
+      <DependentUpon>201605030918279_ShippingCostAsPercentage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Audit.cs" />
     <Compile Include="Models\Category.cs" />
@@ -298,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605021508122_AddedAudit.resx">
       <DependentUpon>201605021508122_AddedAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605030918279_ShippingCostAsPercentage.resx">
+      <DependentUpon>201605030918279_ShippingCostAsPercentage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
