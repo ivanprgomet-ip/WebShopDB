@@ -156,6 +156,24 @@
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="30cabff2-1953-474a-8f7d-b28a8ada825c"
+            name="Audits"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="d1c372ba-1ed3-4f4a-abe5-9bea0ccce73c"
+                LastKnownName="DBSet&lt;Audit&gt;"
+                LastKnownLocation="Package_1819.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -227,6 +245,11 @@
       <undefinedType
         Id="0ce0cd3c-c06e-4a1e-bc4c-4dd951f0022f"
         name="DBSet&lt;ProductOrder&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d1c372ba-1ed3-4f4a-abe5-9bea0ccce73c"
+        name="DBSet&lt;Audit&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebShop.Models
 {
-    public class Customer
+    public abstract class Customer
     {
         public int CustomerID { get; set; }
         public string Firstname { get; set; }
