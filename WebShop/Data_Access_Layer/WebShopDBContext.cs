@@ -21,6 +21,7 @@ namespace WebShop.Data_Access_Layer
         public DbSet<ShippingCompany> ShippingCompanies { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Audit> Audits { get; set; }
 
         public DbSet<ProductOrder> ProductOrders { get; set; }//temp
     }

@@ -9,9 +9,8 @@ namespace WebShop.Migrations
     {
         public Configuration()
         {
-            //AutomaticMigrationsEnabled = true;
-            //AutomaticMigrationDataLossAllowed = true;
             AutomaticMigrationsEnabled = false;
+            AutomaticMigrationDataLossAllowed = true;
             ContextKey = "WebShop.Data_Access_Layer.WebShopDBContext";
         }
 

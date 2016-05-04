@@ -20,9 +20,9 @@ namespace WebShop.Data_Access_Layer
             context.Manufacturers.Add(manufacturer2);
             context.Manufacturers.Add(manufacturer3);
 
-            var shippingCompany1 = new ShippingCompany() { ShippingCompanyName = "DB Schenker", ShippingCost = 199 };
-            var shippingCompany2 = new ShippingCompany() { ShippingCompanyName = "DHL", ShippingCost = 249};
-            var shippingCompany3 = new ShippingCompany() { ShippingCompanyName = "Maersk", ShippingCost = 399};
+            var shippingCompany1 = new ShippingCompany() { ShippingCompanyName = "DB Schenker", ShippingCostPercentage = 0.04M };
+            var shippingCompany2 = new ShippingCompany() { ShippingCompanyName = "DHL", ShippingCostPercentage = 0.02M};
+            var shippingCompany3 = new ShippingCompany() { ShippingCompanyName = "Maersk", ShippingCostPercentage = 0.2M};
             context.ShippingCompanies.Add(shippingCompany1);
             context.ShippingCompanies.Add(shippingCompany2);
             context.ShippingCompanies.Add(shippingCompany3);
