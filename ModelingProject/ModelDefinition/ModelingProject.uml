@@ -1016,7 +1016,7 @@ Many products can be made by one Manufacturer.</description>
           </property>
           <property
             Id="c0f743c9-159b-435b-a3a2-5834fa84869b"
-            name="ShippingCost"
+            name="shippingCostPercentage"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1024,7 +1024,14 @@ Many products can be made by one Manufacturer.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="6c98b5df-02f8-47d0-9a86-e9eea2434911"
+                LastKnownName="Decimal"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -1385,6 +1392,11 @@ Many products can be made by one Manufacturer.</description>
           </property>
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6c98b5df-02f8-47d0-9a86-e9eea2434911"
+        name="Decimal" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
