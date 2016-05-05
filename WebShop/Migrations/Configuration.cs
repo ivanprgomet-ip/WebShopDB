@@ -9,9 +9,8 @@ namespace WebShop.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             AutomaticMigrationDataLossAllowed = true;
-            ContextKey = "WebShop.Data_Access_Layer.WebShopDBContext";
         }
 
         protected override void Seed(WebShop.Data_Access_Layer.WebShopDBContext context)
