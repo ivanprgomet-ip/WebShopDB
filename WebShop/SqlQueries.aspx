@@ -444,6 +444,33 @@
             </SelectParameters>
         </asp:SqlDataSource>
         <br />
+        Count products in stock by entering category ID<br />
+        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+        <asp:Button ID="Button7" runat="server" Text="Search" />
+        <br />
+        <asp:GridView ID="GridView18" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource20" ForeColor="#333333" GridLines="None">
+            <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:BoundField DataField="CategoryName" HeaderText="CategoryName" SortExpression="CategoryName" />
+                <asp:BoundField DataField="Column1" HeaderText="Stock " ReadOnly="True" SortExpression="Column1" />
+            </Columns>
+            <EditRowStyle BackColor="#2461BF" />
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource20" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spSumStockByCategoryID" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="TextBox8" Name="CategoryID" PropertyName="Text" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <br />
         <br />
     </div>
     </form>
