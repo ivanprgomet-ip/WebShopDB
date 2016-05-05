@@ -3,10 +3,19 @@ namespace WebShop.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.tblAudit",
+                c => new
+                    {
+                        LogID = c.Int(nullable: false, identity: true),
+                        LogMsg = c.String(),
+                    })
+                .PrimaryKey(t => t.LogID);
+            
             CreateTable(
                 "dbo.Categories",
                 c => new
@@ -41,7 +50,7 @@ namespace WebShop.Migrations
                 c => new
                     {
                         ManufacturerID = c.Int(nullable: false, identity: true),
-                        ManufacturerName = c.String(),
+                        ManufacturerName = c.String(nullable: false, maxLength: 250),
                     })
                 .PrimaryKey(t => t.ManufacturerID);
             
@@ -51,8 +60,8 @@ namespace WebShop.Migrations
                     {
                         OrderID = c.Int(nullable: false, identity: true),
                         OrderStatus = c.String(),
-                        ShippingDate = c.DateTime(nullable: false),
                         TotalPrice = c.Long(nullable: false),
+                        ShippingDate = c.DateTime(nullable: false),
                         CustomerID = c.Int(nullable: false),
                         ShippingCompanyID = c.Int(nullable: false),
                     })
@@ -100,7 +109,7 @@ namespace WebShop.Migrations
                     {
                         ShippingCompanyID = c.Int(nullable: false, identity: true),
                         ShippingCompanyName = c.String(),
-                        ShippingCost = c.Long(nullable: false),
+                        ShippingCostPercentage = c.Decimal(nullable: false, precision: 18, scale: 2),
                     })
                 .PrimaryKey(t => t.ShippingCompanyID);
             
@@ -127,6 +136,7 @@ namespace WebShop.Migrations
             DropTable("dbo.Manufacturers");
             DropTable("dbo.Customers");
             DropTable("dbo.Categories");
+            DropTable("dbo.tblAudit");
         }
     }
 }

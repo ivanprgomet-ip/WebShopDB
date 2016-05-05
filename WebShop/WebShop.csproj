@@ -170,18 +170,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604281457290_InitialCreate.cs" />
-    <Compile Include="Migrations\201604281457290_InitialCreate.Designer.cs">
-      <DependentUpon>201604281457290_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605021508122_AddedAudit.cs" />
-    <Compile Include="Migrations\201605021508122_AddedAudit.Designer.cs">
-      <DependentUpon>201605021508122_AddedAudit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605030918279_ShippingCostAsPercentage.cs" />
-    <Compile Include="Migrations\201605030918279_ShippingCostAsPercentage.Designer.cs">
-      <DependentUpon>201605030918279_ShippingCostAsPercentage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Audit.cs" />
     <Compile Include="Models\Category.cs" />
@@ -295,17 +283,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604281457290_InitialCreate.resx">
-      <DependentUpon>201604281457290_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605021508122_AddedAudit.resx">
-      <DependentUpon>201605021508122_AddedAudit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605030918279_ShippingCostAsPercentage.resx">
-      <DependentUpon>201605030918279_ShippingCostAsPercentage.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
