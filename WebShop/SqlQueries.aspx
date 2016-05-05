@@ -472,6 +472,27 @@
         </asp:SqlDataSource>
         <br />
         <br />
+        Shows avaliable models from different manufacturers and categories<asp:GridView ID="GridView19" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource21" ForeColor="#333333" GridLines="None">
+            <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:BoundField DataField="ManufacturerName" HeaderText="ManufacturerName" SortExpression="ManufacturerName" />
+                <asp:BoundField DataField="CategoryName" HeaderText="CategoryName" SortExpression="CategoryName" />
+                <asp:BoundField DataField="Category models avaliable" HeaderText="Category models avaliable" ReadOnly="True" SortExpression="Category models avaliable" />
+            </Columns>
+            <EditRowStyle BackColor="#2461BF" />
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource21" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spCountCategoryModelsAvaliable" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+        <br />
+        <br />
     </div>
     </form>
 </body>
