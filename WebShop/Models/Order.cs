@@ -25,6 +25,6 @@ namespace WebShop.Models
         [ForeignKey("ShippingCompanyID")]
         public virtual ShippingCompany ShippingCompany { get; set; }
         
-        public virtual ICollection<OrderProducts> OrderProducts { get; set; }//changed from product to productorder
+        public virtual ICollection<ProductOrder> ProductOrders { get; set; }//changed from product to productorder
     }
 }

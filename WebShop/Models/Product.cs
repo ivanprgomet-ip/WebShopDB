@@ -22,6 +22,6 @@ namespace WebShop.Models
         [ForeignKey("ManufacturerID")]
         public virtual Manufacturer Manufacturer { get; set; }
 
-        public virtual ICollection<OrderProducts> Orders { get; set; }//changed from order to productorder
+        public virtual ICollection<ProductOrder> Orders { get; set; }
     }
 }
