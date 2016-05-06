@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebShop.Models.ShippingCompany>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ShippingCompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShippingCostPercentage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShippingCompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShippingCostPercentage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ShippingCompanyID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ShippingCompanyID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ShippingCompanyID })
+        </td>
+    </tr>
+}
+
+</table>

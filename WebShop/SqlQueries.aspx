@@ -493,6 +493,7 @@
         <asp:SqlDataSource ID="SqlDataSource21" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spCountCategoryModelsAvaliable" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
         <br />
+        <br />
     </div>
     </form>
 </body>
