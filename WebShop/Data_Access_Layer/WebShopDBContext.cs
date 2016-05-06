@@ -11,7 +11,8 @@ namespace WebShop.Data_Access_Layer
     {
         public WebShopDBContext()
         {
-            
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<WebShopDBContext,
+             WebShop.Migrations.Configuration>());
         }
         public DbSet<Customer> Customers { get; set; }//abstract class
         public DbSet<CorporateCustomer> CorporateCustomers { get; set; }//subclass

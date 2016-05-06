@@ -4,6 +4,7 @@ namespace WebShop.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using WebShop.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<WebShop.Data_Access_Layer.WebShopDBContext>
     {
@@ -15,6 +16,18 @@ namespace WebShop.Migrations
 
         protected override void Seed(WebShop.Data_Access_Layer.WebShopDBContext context)
         {
+            context.CorporateCustomers.Add(new CorporateCustomer()
+            {
+                Firstname = "Bobby",
+                Lastname = "Nelson",
+                City = "Luzern",
+                EmailAdress = "Bobby@LHotel.ch",
+                StreetAdress = "WeibStrase 7",
+                ZipCode = "8888",
+                CompanyName = "LuzernHotel",
+                CompanyPhoneNumber = "08899899999",
+                CompanyWebSite = "www.LuzernHotel.ch",
+            });
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
