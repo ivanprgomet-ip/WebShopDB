@@ -14,6 +14,8 @@ namespace WebShop.Models
         public string OrderStatus { get; set; }
         public long TotalPrice { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]//makes it pretty on website
         [Required(ErrorMessage ="ShippingDate is Required")]
         public DateTime ShippingDate { get; set; }
 
