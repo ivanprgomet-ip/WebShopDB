@@ -65,13 +65,13 @@ namespace WebShop.Controllers
         }
 
         // GET: ProductOrder/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int? id)//changed from id to productOrderID
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ProductOrder productOrder = db.ProductOrders.Find(id);
+            ProductOrder productOrder = db.ProductOrders.Find(id);//old value
             if (productOrder == null)
             {
                 return HttpNotFound();
