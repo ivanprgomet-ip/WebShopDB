@@ -18,10 +18,6 @@ namespace WebShop.Controllers
         // GET: CorporateCustomer
         public ActionResult Index()
         {
-            /*changed this 
-            from: "db.Customers.ToList()" 
-            to:"db.CorporateCustomers.ToList()" 
-            to avoid exception*/
             return View(db.CorporateCustomers.ToList());
         }
 
@@ -32,7 +28,7 @@ namespace WebShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CorporateCustomer corporateCustomer = db.Customers.Find(id) as CorporateCustomer;//had to add "as CorporateCustomer"
+            CorporateCustomer corporateCustomer = db.CorporateCustomers.Find(id);
             if (corporateCustomer == null)
             {
                 return HttpNotFound();
@@ -70,7 +66,7 @@ namespace WebShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CorporateCustomer corporateCustomer = db.Customers.Find(id)as CorporateCustomer;//had to add "as CorporateCustomer"
+            CorporateCustomer corporateCustomer = db.CorporateCustomers.Find(id);
             if (corporateCustomer == null)
             {
                 return HttpNotFound();
@@ -101,7 +97,7 @@ namespace WebShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CorporateCustomer corporateCustomer = db.Customers.Find(id) as CorporateCustomer;//had to add "as CorporateCustomer"
+            CorporateCustomer corporateCustomer = db.CorporateCustomers.Find(id);
             if (corporateCustomer == null)
             {
                 return HttpNotFound();
@@ -114,7 +110,7 @@ namespace WebShop.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            CorporateCustomer corporateCustomer = db.Customers.Find(id) as CorporateCustomer;//had to add "as CorporateCustomer"
+            CorporateCustomer corporateCustomer = db.CorporateCustomers.Find(id);
             db.Customers.Remove(corporateCustomer);
             db.SaveChanges();
             return RedirectToAction("Index");

@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.ShippingCompanyName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ShippingCost)
+            @Html.DisplayNameFor(model => model.ShippingCostPercentage)
         </th>
         <th></th>
     </tr>
@@ -26,7 +26,7 @@
             @Html.DisplayFor(modelItem => item.ShippingCompanyName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ShippingCost)
+            @Html.DisplayFor(modelItem => item.ShippingCostPercentage)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ShippingCompanyID }) |

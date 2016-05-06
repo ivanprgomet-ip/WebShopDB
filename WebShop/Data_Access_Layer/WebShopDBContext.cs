@@ -11,18 +11,18 @@ namespace WebShop.Data_Access_Layer
     {
         public WebShopDBContext()
         {
-            
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<WebShopDBContext,
+             WebShop.Migrations.Configuration>());
         }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<CorporateCustomer> CorporateCustomers { get; set; }
-        public DbSet<PrivateCustomer> PrivateCustomers { get; set; }
+        public DbSet<Customer> Customers { get; set; }//abstract class
+        public DbSet<CorporateCustomer> CorporateCustomers { get; set; }//subclass
+        public DbSet<PrivateCustomer> PrivateCustomers { get; set; }//subclass
         public DbSet<Category> Categories { get; set; }
         public DbSet<Manufacturer> Manufacturers { get; set; }
         public DbSet<ShippingCompany> ShippingCompanies { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Audit> Audits { get; set; }
-
-        public DbSet<ProductOrder> ProductOrders { get; set; }//temp
+        public DbSet<ProductOrder> ProductOrders { get; set; }//junction class/table
     }
 }

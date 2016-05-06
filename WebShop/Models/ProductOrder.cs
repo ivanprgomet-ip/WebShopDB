@@ -21,6 +21,6 @@ namespace WebShop.Models
         [ForeignKey("ProductID")]
         public virtual Product Product { get; set; }
 
-        public int ProductQuantity { get; set; }//additional content
+        public int ProductQuantity { get; set; }
     }
 }

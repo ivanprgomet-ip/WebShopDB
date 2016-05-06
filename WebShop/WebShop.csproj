@@ -166,7 +166,6 @@
     <Compile Include="Controllers\ProductOrderController.cs" />
     <Compile Include="Controllers\ShippingCompanyController.cs" />
     <Compile Include="Data_Access_Layer\WebShopDBContext.cs" />
-    <Compile Include="Data_Access_Layer\WebShopDBInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -231,21 +230,26 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\CorporateCustomer\Create.cshtml" />
-    <Content Include="Views\CorporateCustomer\Delete.cshtml" />
-    <Content Include="Views\CorporateCustomer\Details.cshtml" />
-    <Content Include="Views\CorporateCustomer\Edit.cshtml" />
-    <Content Include="Views\CorporateCustomer\Index.cshtml" />
     <Content Include="Views\PrivateCustomer\Create.cshtml" />
     <Content Include="Views\PrivateCustomer\Delete.cshtml" />
     <Content Include="Views\PrivateCustomer\Details.cshtml" />
     <Content Include="Views\PrivateCustomer\Edit.cshtml" />
     <Content Include="Views\PrivateCustomer\Index.cshtml" />
+    <Content Include="Views\CorporateCustomer\Create.cshtml" />
+    <Content Include="Views\CorporateCustomer\Delete.cshtml" />
+    <Content Include="Views\CorporateCustomer\Details.cshtml" />
+    <Content Include="Views\CorporateCustomer\Edit.cshtml" />
+    <Content Include="Views\CorporateCustomer\Index.cshtml" />
     <Content Include="Views\Product\Create.cshtml" />
     <Content Include="Views\Product\Delete.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Product\Edit.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Manufacturer\Create.cshtml" />
+    <Content Include="Views\Manufacturer\Delete.cshtml" />
+    <Content Include="Views\Manufacturer\Details.cshtml" />
+    <Content Include="Views\Manufacturer\Edit.cshtml" />
+    <Content Include="Views\Manufacturer\Index.cshtml" />
     <Content Include="Views\Order\Create.cshtml" />
     <Content Include="Views\Order\Delete.cshtml" />
     <Content Include="Views\Order\Details.cshtml" />
@@ -261,11 +265,6 @@
     <Content Include="Views\Category\Details.cshtml" />
     <Content Include="Views\Category\Edit.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
-    <Content Include="Views\Manufacturer\Create.cshtml" />
-    <Content Include="Views\Manufacturer\Delete.cshtml" />
-    <Content Include="Views\Manufacturer\Details.cshtml" />
-    <Content Include="Views\Manufacturer\Edit.cshtml" />
-    <Content Include="Views\Manufacturer\Index.cshtml" />
     <Content Include="Views\ShippingCompany\Create.cshtml" />
     <Content Include="Views\ShippingCompany\Delete.cshtml" />
     <Content Include="Views\ShippingCompany\Details.cshtml" />

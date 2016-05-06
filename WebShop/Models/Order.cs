@@ -13,18 +13,20 @@ namespace WebShop.Models
         public int OrderID { get; set; }
         public string OrderStatus { get; set; }
         public long TotalPrice { get; set; }
-        [Required]
-        public DateTime ShippingDate { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]//makes it pretty on website
+        [Required(ErrorMessage ="ShippingDate is Required")]
+        public DateTime ShippingDate { get; set; }
 
         public int CustomerID { get; set; }
         [ForeignKey("CustomerID")]
         public virtual Customer Customer { get; set; }
-
-        public int ShippingCompanyID { get; set; }
+        
+        public int? ShippingCompanyID { get; set; }
         [ForeignKey("ShippingCompanyID")]
         public virtual ShippingCompany ShippingCompany { get; set; }
         
-        public virtual ICollection<ProductOrder> Products { get; set; }//changed from product to productorder
+        public virtual ICollection<ProductOrder> ProductOrders { get; set; }
     }
 }

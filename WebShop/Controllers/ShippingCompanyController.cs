@@ -47,7 +47,7 @@ namespace WebShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ShippingCompanyID,ShippingCompanyName,ShippingCost")] ShippingCompany shippingCompany)
+        public ActionResult Create([Bind(Include = "ShippingCompanyID,ShippingCompanyName,ShippingCostPercentage")] ShippingCompany shippingCompany)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace WebShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ShippingCompanyID,ShippingCompanyName,ShippingCost")] ShippingCompany shippingCompany)
+        public ActionResult Edit([Bind(Include = "ShippingCompanyID,ShippingCompanyName,ShippingCostPercentage")] ShippingCompany shippingCompany)
         {
             if (ModelState.IsValid)
             {

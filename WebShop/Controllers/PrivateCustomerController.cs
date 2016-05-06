@@ -18,11 +18,7 @@ namespace WebShop.Controllers
         // GET: PrivateCustomer
         public ActionResult Index()
         {
-            /*changed this 
-            from: "db.Customers.ToList()" 
-            to:"db.PrivateCustomers.ToList()" 
-            to avoid exception*/
-            return View(db.PrivateCustomers.ToList());
+            return View(db.PrivateCustomers.ToList());//changed this from Customers to PrivateCustomers
         }
 
         // GET: PrivateCustomer/Details/5
@@ -32,7 +28,7 @@ namespace WebShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PrivateCustomer privateCustomer = db.Customers.Find(id) as PrivateCustomer;//had to add "as PrivateCustomer"
+            PrivateCustomer privateCustomer = db.PrivateCustomers.Find(id);//changed from customers to privatecustomers
             if (privateCustomer == null)
             {
                 return HttpNotFound();
@@ -70,7 +66,7 @@ namespace WebShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PrivateCustomer privateCustomer = db.Customers.Find(id) as PrivateCustomer;//had to add "as PrivateCustomer"
+            PrivateCustomer privateCustomer = db.PrivateCustomers.Find(id);
             if (privateCustomer == null)
             {
                 return HttpNotFound();
@@ -101,7 +97,7 @@ namespace WebShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PrivateCustomer privateCustomer = db.Customers.Find(id) as PrivateCustomer;//had to add "as PrivateCustomer"
+            PrivateCustomer privateCustomer = db.PrivateCustomers.Find(id);
             if (privateCustomer == null)
             {
                 return HttpNotFound();
@@ -114,7 +110,7 @@ namespace WebShop.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            PrivateCustomer privateCustomer = db.Customers.Find(id) as PrivateCustomer;//had to add "as PrivateCustomer"
+            PrivateCustomer privateCustomer = db.PrivateCustomers.Find(id);
             db.Customers.Remove(privateCustomer);
             db.SaveChanges();
             return RedirectToAction("Index");

@@ -50,7 +50,7 @@ namespace WebShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OrderID,ShippingDate,CustomerID,ShippingCompanyID")] Order order)   //removed orderstatus and totalprice from the bind include
+        public ActionResult Create([Bind(Include = "OrderID,OrderStatus,TotalPrice,ShippingDate,CustomerID,ShippingCompanyID")] Order order)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace WebShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OrderID,OrderStatus,ShippingDate,TotalPrice,CustomerID,ShippingCompanyID")] Order order)
+        public ActionResult Edit([Bind(Include = "OrderID,OrderStatus,TotalPrice,ShippingDate,CustomerID,ShippingCompanyID")] Order order)
         {
             if (ModelState.IsValid)
             {

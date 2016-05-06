@@ -16,12 +16,12 @@ namespace WebShop.Models
 
         public int CategoryID { get; set; }
         [ForeignKey("CategoryID")]
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
         public int ManufacturerID { get; set; }
         [ForeignKey("ManufacturerID")]
         public virtual Manufacturer Manufacturer { get; set; }
 
-        public virtual ICollection<ProductOrder> Orders { get; set; }//changed from order to productorder
+        public virtual ICollection<ProductOrder> Orders { get; set; }
     }
 }

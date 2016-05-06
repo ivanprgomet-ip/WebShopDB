@@ -21,10 +21,10 @@
             @Html.DisplayNameFor(model => model.OrderStatus)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ShippingDate)
+            @Html.DisplayNameFor(model => model.TotalPrice)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TotalPrice)
+            @Html.DisplayNameFor(model => model.ShippingDate)
         </th>
         <th></th>
     </tr>
@@ -41,10 +41,10 @@
             @Html.DisplayFor(modelItem => item.OrderStatus)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ShippingDate)
+            @Html.DisplayFor(modelItem => item.TotalPrice)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TotalPrice)
+            @Html.DisplayFor(modelItem => item.ShippingDate)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.OrderID }) |

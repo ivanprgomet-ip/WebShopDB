@@ -40,7 +40,7 @@ namespace WebShop.Controllers
         // GET: ProductOrder/Create
         public ActionResult Create()
         {
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID");  //changed second parameter from orderstatus to orderid
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID");
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName");
             return View();
         }
@@ -59,24 +59,24 @@ namespace WebShop.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", productOrder.OrderID);//changed second parameter from orderstatus to orderid
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", productOrder.OrderID);
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName", productOrder.ProductID);
             return View(productOrder);
         }
 
         // GET: ProductOrder/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int? id)//changed from id to productOrderID
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ProductOrder productOrder = db.ProductOrders.Find(id);
+            ProductOrder productOrder = db.ProductOrders.Find(id);//old value
             if (productOrder == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", productOrder.OrderID); //changed second parameter from orderstatus to orderid
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", productOrder.OrderID);
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName", productOrder.ProductID);
             return View(productOrder);
         }
@@ -94,7 +94,7 @@ namespace WebShop.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", productOrder.OrderID);//changed second parameter from orderstatus to orderid
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", productOrder.OrderID);
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName", productOrder.ProductID);
             return View(productOrder);
         }
