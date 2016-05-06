@@ -40,7 +40,7 @@ namespace WebShop.Controllers
         // GET: ProductOrder/Create
         public ActionResult Create()
         {
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderStatus");
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID");
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName");
             return View();
         }
@@ -59,7 +59,7 @@ namespace WebShop.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderStatus", productOrder.OrderID);
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", productOrder.OrderID);
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName", productOrder.ProductID);
             return View(productOrder);
         }
@@ -76,7 +76,7 @@ namespace WebShop.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderStatus", productOrder.OrderID);
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", productOrder.OrderID);
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName", productOrder.ProductID);
             return View(productOrder);
         }
@@ -94,7 +94,7 @@ namespace WebShop.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderStatus", productOrder.OrderID);
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", productOrder.OrderID);
             ViewBag.ProductID = new SelectList(db.Products, "ProductID", "ProductName", productOrder.ProductID);
             return View(productOrder);
         }
