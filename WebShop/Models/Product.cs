@@ -16,7 +16,7 @@ namespace WebShop.Models
 
         public int CategoryID { get; set; }
         [ForeignKey("CategoryID")]
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
         public int ManufacturerID { get; set; }
         [ForeignKey("ManufacturerID")]

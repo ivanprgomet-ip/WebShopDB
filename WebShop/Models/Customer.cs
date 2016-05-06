@@ -27,6 +27,6 @@ namespace WebShop.Models
         [Required(ErrorMessage ="ZipCode is Required")]
         public string ZipCode { get; set; }
 
-
+        public virtual ICollection<Order> Orders { get; set; }//just added
     }
 }

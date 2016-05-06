@@ -72,17 +72,17 @@ namespace WebShop.Migrations
                     CompanyWebSite = "www.LuzernHotel.ch",
                 },
                new CorporateCustomer()
-                {
-                    Firstname = "Lenny",
-                    Lastname = "Graves",
-                    City = "London",
-                    MailAdress = "LennyGraves@Adastra.com",
-                    StreetAdress = "High Road 4",
-                    ZipCode = "7777",
-                    CompanyName = "Adastra Minerals",
-                    CompanyPhoneNumber = "9999952589",
-                    CompanyWebSite = "www.AdastraMinerals.com",
-                },
+               {
+                   Firstname = "Lenny",
+                   Lastname = "Graves",
+                   City = "London",
+                   MailAdress = "LennyGraves@Adastra.com",
+                   StreetAdress = "High Road 4",
+                   ZipCode = "7777",
+                   CompanyName = "Adastra Minerals",
+                   CompanyPhoneNumber = "9999952589",
+                   CompanyWebSite = "www.AdastraMinerals.com",
+               },
                 new CorporateCustomer()
                 {
                     Firstname = "Abraham",

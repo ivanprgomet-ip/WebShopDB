@@ -21,10 +21,10 @@ namespace WebShop.Models
         [ForeignKey("CustomerID")]
         public virtual Customer Customer { get; set; }
         
-        public int ShippingCompanyID { get; set; }
+        public int? ShippingCompanyID { get; set; }
         [ForeignKey("ShippingCompanyID")]
         public virtual ShippingCompany ShippingCompany { get; set; }
         
-        public virtual ICollection<ProductOrder> ProductOrders { get; set; }//changed from product to productorder
+        public virtual ICollection<ProductOrder> ProductOrders { get; set; }
     }
 }

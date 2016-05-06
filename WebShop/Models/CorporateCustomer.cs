@@ -14,6 +14,5 @@ namespace WebShop.Models
         [Required(ErrorMessage ="Company phone number is Required")]
         public string CompanyPhoneNumber { get; set; }
         public string CompanyWebSite { get; set; }
-
     }
 }

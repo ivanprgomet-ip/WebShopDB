@@ -14,5 +14,6 @@ namespace WebShop.Models
         [Required(ErrorMessage = "The Shipping Cost Percentage is Required")]
         public decimal ShippingCostPercentage { get; set; }
 
+        public virtual ICollection<Order> Orders { get; set; }//just added
     }
 }
