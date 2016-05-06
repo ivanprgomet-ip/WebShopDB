@@ -20,7 +20,7 @@ namespace WebShop.Models
         public int CustomerID { get; set; }
         [ForeignKey("CustomerID")]
         public virtual Customer Customer { get; set; }
-
+        
         public int ShippingCompanyID { get; set; }
         [ForeignKey("ShippingCompanyID")]
         public virtual ShippingCompany ShippingCompany { get; set; }
