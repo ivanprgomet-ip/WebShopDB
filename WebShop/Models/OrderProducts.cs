@@ -7,7 +7,7 @@ using System.Web;
 
 namespace WebShop.Models
 {
-    public class ProductOrder
+    public class OrderProducts
     {
         [Key, Column(Order=0)]
         
