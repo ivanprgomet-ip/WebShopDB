@@ -28,12 +28,12 @@ namespace WebShop.Migrations
             context.PrivateCustomers.AddOrUpdate(p => p.MobileNumber,
                 new PrivateCustomer()
                 {
-                    Firstname = "Ivan",
-                    Lastname = "Prgomet",
+                    Firstname = "Erik",
+                    Lastname = "Svensson",
                     City = "Hoganas",
-                    MailAdress = "Ivan_Prgomet@hotmail.com",
-                    StreetAdress = "Långgatan 74",
-                    ZipCode = "26336",
+                    MailAdress = "Erik.Svensson@hotmail.com",
+                    StreetAdress = "Långgatan 82",
+                    ZipCode = "26339",
                     MobileNumber = "0735874526"
                 },
                 new PrivateCustomer()
