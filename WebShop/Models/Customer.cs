@@ -16,7 +16,7 @@ namespace WebShop.Models
 
         [Required(ErrorMessage ="Email Required")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
-        public string EmailAdress { get; set; }
+        public string MailAdress { get; set; }
 
         [Required(ErrorMessage="Street Adress is Required")]
         public string StreetAdress { get; set; }
