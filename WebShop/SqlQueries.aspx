@@ -12,6 +12,7 @@
         <h1>SQL Questions</h1>
         <strong>
         <br />
+        1.
         Enter customer name to search for matching orders
         </strong>
         <br />
@@ -44,7 +45,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-         <strong>Enter Brand to search for matching products
+         <strong>2. Enter Brand to search for matching products
         </strong>
         <br />
         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
@@ -76,7 +77,7 @@
             </SelectParameters>
         </asp:SqlDataSource>
         <br />
-        <strong>Enter highest acceptable price for product
+        <strong>3. Enter highest acceptable price for product
         </strong>
         <br />
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
@@ -106,7 +107,7 @@
             </SelectParameters>
         </asp:SqlDataSource>
         <br />
-        <strong>Search products by Category</strong><br />
+        <strong>4. Search products by Category</strong><br />
         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource4" DataTextField="CategoryName" DataValueField="CategoryID" Height="19px" Width="280px" style="background-color: #CCCCFF">
         </asp:DropDownList>
         <br />
@@ -135,7 +136,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <strong>List all Orders
+        <strong>5. List all Orders
         </strong>
         <br />
         <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource6" ForeColor="#333333" GridLines="None">
@@ -159,7 +160,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="ListOrder" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
-        <strong>Count orders by Shipping Company</strong><br />
+        <strong>6. Count orders by Shipping Company</strong><br />
         <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource7" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -180,7 +181,7 @@
         <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="CountOrderByShipper" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
         <br />
-        <strong>search private customers lastname</strong><br />
+        <strong>7. search private customers lastname</strong><br />
         <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
         <asp:Button ID="Button4" runat="server" Text="Search" style="font-weight: 700; background-color: #CCCCCC;" />
         <br />
@@ -211,7 +212,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <strong>search corporate customers lastname</strong><br />
+        <strong>8. search corporate customers lastname</strong><br />
         <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
         <asp:Button ID="Button5" runat="server" Text="Search" style="font-weight: 700; background-color: #CCCCCC;" />
         <br />
@@ -243,7 +244,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <strong>average unit price</strong>
+        <strong>9. average unit price</strong>
         <asp:GridView ID="GridView9" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource10" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -263,7 +264,7 @@
         <asp:SqlDataSource ID="SqlDataSource10" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spAverageUnitPrice" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
         <br />
-        <strong>shows most expensive product(s) </strong><br />
+        <strong>10. shows most expensive product(s) </strong><br />
         <asp:GridView ID="GridView10" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource11" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -283,7 +284,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource11" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spMostExpensiveProduct" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
-        <br />
+        <strong>11. Search on both Brand and Product name</strong><br />
         <asp:Label ID="Label1" runat="server" Text="Brand: " style="font-weight: 700"></asp:Label>
         &nbsp;<asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
         <br />
@@ -318,7 +319,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <strong>count of products in orderlines</strong><br />
+        <strong>12. Count of products in orderlines</strong><br />
         <asp:GridView ID="GridView12" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource13" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -339,7 +340,7 @@
         <asp:SqlDataSource ID="SqlDataSource13" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spSumProductQuantitiesInOrderlines" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
         <br />
-        <strong>Order products by manufacturer</strong><asp:GridView ID="GridView13" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource14" ForeColor="#333333" GridLines="None" AllowSorting="True">
+        <strong>13. Order products by manufacturer</strong><asp:GridView ID="GridView13" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource14" ForeColor="#333333" GridLines="None" AllowSorting="True">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
@@ -359,7 +360,7 @@
         <asp:SqlDataSource ID="SqlDataSource14" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spGroupProductsByBrand" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
         <br />
-        <strong>Order products by Categories</strong><asp:GridView ID="GridView14" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource15" ForeColor="#333333" GridLines="None" AllowSorting="True">
+        <strong>14. Order products by Categories</strong><asp:GridView ID="GridView14" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource15" ForeColor="#333333" GridLines="None" AllowSorting="True">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
@@ -379,7 +380,7 @@
         <asp:SqlDataSource ID="SqlDataSource15" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spGroupProductsByCategory" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
         <br />
-        <strong>show earliest added customer</strong><asp:GridView ID="GridView15" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="SqlDataSource16" ForeColor="#333333" GridLines="None">
+        <strong>15. Show earliest added customer</strong><asp:GridView ID="GridView15" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="SqlDataSource16" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" InsertVisible="False" ReadOnly="True" SortExpression="CustomerID" />
@@ -399,12 +400,13 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource16" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spShowLatestCustomer" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
-        <strong>Top 1 most expensive order</strong><br />
+        <strong>16. Show most expensive order:</strong><br />
         <asp:GridView ID="GridView16" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource17" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField DataField="TotalPrice" HeaderText="TotalPrice" SortExpression="TotalPrice" />
                 <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" SortExpression="CustomerID" />
+                <asp:BoundField DataField="Fullname" HeaderText="Fullname" SortExpression="Fullname" ReadOnly="True" />
+                <asp:BoundField DataField="total order price" HeaderText="total order price" ReadOnly="True" SortExpression="total order price" />
             </Columns>
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -419,7 +421,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource17" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spShowMostExpensiveOrder" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
-        <strong>Show more Specifically the shipping cost for entered OrderID</strong><br />
+        <strong>17. Show more Specifically the shipping cost for entered OrderID </strong>(0 sek orders contain no orderlines)<br />
         <asp:SqlDataSource ID="SqlDataSource19" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spGetOrders" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource19" DataTextField="OrderID" DataValueField="OrderID" Height="19px" Width="280px" AutoPostBack="True" style="background-color: #CCCCFF">
         </asp:DropDownList>
@@ -450,7 +452,7 @@
             </SelectParameters>
         </asp:SqlDataSource>
         <br />
-        <strong>Count products in stock by entering category ID</strong><br />
+        <strong>18. Count products in stock by entering category ID</strong><br />
         <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
         <asp:Button ID="Button7" runat="server" Text="Search" style="background-color: #CCCCCC" />
         <br />
@@ -478,7 +480,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <strong aria-orientation="horizontal">Shows avaliable models from different manufacturers and categories</strong><asp:GridView ID="GridView19" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource21" ForeColor="#333333" GridLines="None">
+        <strong aria-orientation="horizontal">19. Shows avaliable models from different manufacturers and categories</strong><asp:GridView ID="GridView19" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource21" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="ManufacturerName" HeaderText="ManufacturerName" SortExpression="ManufacturerName" />
@@ -498,7 +500,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource21" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spCountCategoryModelsAvaliable" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
-        <strong>Show products on Discount</strong><br />
+        <strong>20. Show products on Discount</strong><br />
         <asp:GridView ID="GridView20" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource22" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -524,7 +526,7 @@
         <br />
         <br />
         <br />
-        <strong>Select a customer to list</strong><br />
+        <strong>21. Select a customer to list</strong><br />
         <asp:GridView ID="GridView21" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="SqlDataSource23" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -581,7 +583,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <strong>Select a product to list</strong>
+        <strong>22. Select a product to list</strong>
         <asp:GridView ID="GridView22" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ProductName" DataSourceID="SqlDataSource25" ForeColor="#333333" GridLines="None" Height="132px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -600,7 +602,7 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
         <br />
-        <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" CellPadding="4" DataSourceID="SqlDataSource26" ForeColor="#333333" GridLines="None" Height="50px" Width="125px">
+        <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" CellPadding="4" DataSourceID="SqlDataSource26" ForeColor="#333333" GridLines="None" Height="50px" Width="190px">
             <AlternatingRowStyle BackColor="White" />
             <CommandRowStyle BackColor="#D1DDF1" Font-Bold="True" />
             <EditRowStyle BackColor="#2461BF" />

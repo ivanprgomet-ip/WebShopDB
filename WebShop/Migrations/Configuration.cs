@@ -94,6 +94,18 @@ namespace WebShop.Migrations
                     CompanyName = "Greycon",
                     CompanyPhoneNumber = "369369987987",
                     CompanyWebSite = "www.Greycon.com",
+                },
+                new CorporateCustomer()
+                {
+                    Firstname = "Hillary",
+                    Lastname = "Smith",
+                    City = "London",
+                    MailAdress = "H.Smith@BadPress.com",
+                    StreetAdress = "Sunny Road 77",
+                    ZipCode = "2233",
+                    CompanyName = "Bad Press",
+                    CompanyPhoneNumber = "88855522558",
+                    CompanyWebSite = "www.BadPress.com",
                 });
 
             context.Manufacturers.AddOrUpdate(p => p.ManufacturerName,
