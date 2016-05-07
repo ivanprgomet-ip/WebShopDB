@@ -263,7 +263,7 @@
         <asp:SqlDataSource ID="SqlDataSource10" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spAverageUnitPrice" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
         <br />
-        <strong>shows most expensive product</strong><br />
+        <strong>shows most expensive product(s) </strong><br />
         <asp:GridView ID="GridView10" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource11" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -281,7 +281,7 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource11" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="Top10Percentage" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource11" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spMostExpensiveProduct" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
         <br />
         <asp:Label ID="Label1" runat="server" Text="Brand: " style="font-weight: 700"></asp:Label>
@@ -478,7 +478,7 @@
         </asp:SqlDataSource>
         <br />
         <br />
-        <strong>Shows avaliable models from different manufacturers and categories</strong><asp:GridView ID="GridView19" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource21" ForeColor="#333333" GridLines="None">
+        <strong aria-orientation="horizontal">Shows avaliable models from different manufacturers and categories</strong><asp:GridView ID="GridView19" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource21" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="ManufacturerName" HeaderText="ManufacturerName" SortExpression="ManufacturerName" />
