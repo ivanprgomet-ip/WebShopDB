@@ -153,6 +153,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddOrderlines.aspx.cs">
+      <DependentUpon>AddOrderlines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddOrderlines.aspx.designer.cs">
+      <DependentUpon>AddOrderlines.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -190,6 +197,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddOrderlines.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
