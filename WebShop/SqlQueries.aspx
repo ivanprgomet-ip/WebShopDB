@@ -5,12 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            background-color: #C6D5F0;
-        }
-    </style>
-</head>
+    </head>
 <body>
     <form id="form1" runat="server">
     <div style="background-color: #C6D5F0">
@@ -528,6 +523,62 @@
         <asp:SqlDataSource ID="SqlDataSource22" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="spProductsOnDiscount" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
         <br />
+        <br />
+        <strong>Select a customer to list</strong><br />
+        <asp:GridView ID="GridView21" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="SqlDataSource23" ForeColor="#333333" GridLines="None">
+            <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" InsertVisible="False" ReadOnly="True" SortExpression="CustomerID" />
+                <asp:BoundField DataField="Firstname" HeaderText="Firstname" SortExpression="Firstname" />
+                <asp:BoundField DataField="Lastname" HeaderText="Lastname" SortExpression="Lastname" />
+            </Columns>
+            <EditRowStyle BackColor="#2461BF" />
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+        </asp:GridView>
+        <br />
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="SqlDataSource24" ForeColor="#333333" GridLines="None" Height="50px" Width="125px">
+            <AlternatingRowStyle BackColor="White" />
+            <CommandRowStyle BackColor="#D1DDF1" Font-Bold="True" />
+            <EditRowStyle BackColor="#2461BF" />
+            <FieldHeaderStyle BackColor="#DEE8F5" Font-Bold="True" />
+            <Fields>
+                <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" InsertVisible="False" ReadOnly="True" SortExpression="CustomerID" />
+                <asp:BoundField DataField="Firstname" HeaderText="Firstname" SortExpression="Firstname" />
+                <asp:BoundField DataField="Lastname" HeaderText="Lastname" SortExpression="Lastname" />
+                <asp:BoundField DataField="StreetAdress" HeaderText="StreetAdress" SortExpression="StreetAdress" />
+                <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                <asp:BoundField DataField="ZipCode" HeaderText="ZipCode" SortExpression="ZipCode" />
+                <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
+                <asp:BoundField DataField="CompanyPhoneNumber" HeaderText="CompanyPhoneNumber" SortExpression="CompanyPhoneNumber" />
+                <asp:BoundField DataField="CompanyWebSite" HeaderText="CompanyWebSite" SortExpression="CompanyWebSite" />
+                <asp:BoundField DataField="MobileNumber" HeaderText="MobileNumber" SortExpression="MobileNumber" />
+                <asp:BoundField DataField="Discriminator" HeaderText="Discriminator" SortExpression="Discriminator">
+                <HeaderStyle BackColor="#CCCCFF" />
+                <ItemStyle BackColor="#CCCCFF" />
+                </asp:BoundField>
+                <asp:BoundField DataField="MailAdress" HeaderText="MailAdress" SortExpression="MailAdress" />
+            </Fields>
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+        </asp:DetailsView>
+        <br />
+        <asp:SqlDataSource ID="SqlDataSource23" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="SELECT [CustomerID], [Firstname], [Lastname] FROM [Customers]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource24" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopDBContext %>" SelectCommand="SELECT * FROM [Customers] WHERE ([CustomerID] = @CustomerID)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="GridView21" Name="CustomerID" PropertyName="SelectedValue" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
         <br />
     </div>
     </form>
